@@ -91,9 +91,9 @@ def process_topic_metrics(metrics_list, json_str, cluster_name, topic_exclusion_
 
 
 def get_schema_metrics():
-    url = "https://api.telemetry.confluent.cloud/v2/metrics/cloud/export?resource.schema_registry.id=lsrc-kgndpp"
+    url = "https://api.telemetry.confluent.cloud/v2/metrics/cloud/export?resource.schema_registry.id=<CLUSTER_NAME_HERE>"
     headers = {
-      'Authorization': 'Basic WVVDQ1JDR1hUWEhIQ1EzVzpWQlM2NzNWbjZqa1ordmZBTHZObG1Nb0I3RHdBdUZucTNyeGUrUXQ0dUU5Q20rL2FvYitmWGxvVjdyaWF5Sitj'
+      'Authorization': 'Basic <AUTH TOKEN HERE>'
     }
     response = requests.request("GET", url, headers=headers)
     resp_text = response.text
